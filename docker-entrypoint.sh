@@ -1,4 +1,4 @@
-git clone --depth 1 http://bitbucket.org/josemota/dockerapp app
+git clone --depth 1 https://chuyihuang@bitbucket.org/chuyihuang/dockerapp.git app
 
 cd app
 
