@@ -22,4 +22,13 @@ if [[ $? != 0 ]]; then
   bundle exec rake db:migrate
 fi
 
-bundle exec rails server -b 0.0.0.0
+export SECRET_KEY_BASE=$(rake secret)
+
+sudo rm /etc/nginx/sites-enabled/*
+sudo ln -s /home/app/nginx.conf /etc/nginx/sites-enabled/app.conf
+
+sudo service nginx start
+
+bundle exec rake assets:clean assets:precompile
+
+bundle exec puma -e production -b unit:///home/app/puma.sock
