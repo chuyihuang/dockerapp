@@ -1,6 +1,13 @@
-git clone --depth 1 git@bitbucket.org:chuyihuang/dockerapp.git app
+git clone --depth 1 https://chuyihuang@bitbucket.org/chuyihuang/dockerapp.git app
+# git clone --depth 1 http://bitbucket.org/josemota/dockerapp app
 
 cd app
+
+
+source "/usr/local/share/chruby/chruby.sh"
+chruby ruby
+
+gem install bundler
 
 bundle install
 
