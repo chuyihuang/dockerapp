@@ -1,10 +1,11 @@
-git clone --depth 1 https://chuyihuang@bitbucket.org/chuyihuang/dockerapp.git app
+# git clone --depth 1 https://chuyihuang@bitbucket.org/chuyihuang/dockerapp.git app
 # git clone --depth 1 http://bitbucket.org/josemota/dockerapp app
+git clone --depth 1 https://github.com/chuyihuang/dockerapp.git app
 
 cd app
 
-
 source "/usr/local/share/chruby/chruby.sh"
+
 chruby ruby
 
 gem install bundler
@@ -21,4 +22,4 @@ if [[ $? != 0 ]]; then
   bundle exec rake db:migrate
 fi
 
-bundle exec rails server
+bundle exec rails server -b 0.0.0.0
