@@ -31,4 +31,4 @@ sudo service nginx start
 
 bundle exec rake assets:clean assets:precompile
 
-bundle exec puma -e production -b unit:///home/app/puma.sock
+bundle exec puma -e production -b unix:///home/app/puma.sock
