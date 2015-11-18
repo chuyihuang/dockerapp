@@ -4,7 +4,7 @@ MAINTAINER Chuyi <chuyihuang@gmail.com>
 #系統更新
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-RUN apt-get update
+RUN apt-get update --fix-missing
 RUN apt-get upgrade -y
 RUN apt-get install -y curl wget ca-certificates build-essential autoconf python-software-properties libyaml-dev
 
@@ -15,7 +15,7 @@ RUN echo "deb http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/source
 RUN echo "deb-src http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list
 
 #其他系統資訊
-RUN apt-get install -y libssl-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev bison openssl make git libpq-dev libsqlite3-dev nodejs
+RUN apt-get install -y libssl-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev bison openssl make git libpq-dev libsqlite3-dev nodejs nginx
 RUN apt-get clean
 
 RUN echo %sudo    ALL=NOPASSWD: ALL >> /etc/sudoers
@@ -40,7 +40,7 @@ RUN rm -rf /home/app/src
 
 ADD docker-entrypoint.sh /home/app/docker-entrypoint.sh
 ADD setup.sh /home/app/setup.sh
-ADD nginx.conf.sh /home/app/nginx.conf
+ADD nginx.conf /home/app/nginx.conf
 
 ENV RAILS_ENV=production
 
