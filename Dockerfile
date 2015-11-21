@@ -43,7 +43,7 @@ RUN ruby-install ruby
 RUN rm -rf /home/app/src
 
 ADD docker-entrypoint.sh /home/app/docker-entrypoint.sh
-ADD setup.sh /home/app/setup.sh
+# ADD setup.sh /home/app/setup.sh
 ADD nginx.conf /home/app/nginx.conf
 
 ENV RAILS_ENV=production
