@@ -15,7 +15,12 @@ RUN echo "deb http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/source
 RUN echo "deb-src http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list
 
 #其他系統資訊
-RUN apt-get install -y libssl-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev bison openssl make git libpq-dev libsqlite3-dev nodejs nginx
+RUN apt-get install -y libssl-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev bison openssl make git libsqlite3-dev nodejs nginx
+#Mysql
+#RUN apt-get install -y mysql-server mysql-client libmysqld-dev
+RUN apt-get install -y libmysqld-dev
+
+
 RUN apt-get clean
 
 RUN echo %sudo    ALL=NOPASSWD: ALL >> /etc/sudoers

@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :production do
-  gem "pg"
+  gem 'mysql2'
 end
 gem 'puma'
 # Use ActiveModel has_secure_password
