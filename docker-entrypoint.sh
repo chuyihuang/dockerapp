@@ -7,7 +7,6 @@ source "/usr/local/share/chruby/chruby.sh"
 chruby ruby
 
 gem install bundler
-gem install mysql2
 
 bundle install --without=development,test
 
