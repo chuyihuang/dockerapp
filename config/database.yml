@@ -28,4 +28,4 @@ production:
   password: aabbcc
   pool: 5
   timeout: 5000
-  host: mysql
+  host: 127.0.0.1
