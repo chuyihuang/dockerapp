@@ -1,7 +1,7 @@
 db() {
   # docker run -P --volumes-from app_data --name app_db -e POSTGRES_USER=app_user -e POSTGRES_PASSWORD=$APP_PWD -d -t postgres:latest
   # docker run -e POSTGRES_USER=app_user -e POSTGRES_PASSWORD=$APP_PWD -d -t postgres:latest
-  docker run --name mysql -e MYSQL_ROOT_PASSWORD=aabbcc -d -t mysql:latest
+  docker run -P --volumes-from app_data --name mysql -e MYSQL_ROOT_PASSWORD=aabbcc -d -t mysql:latest
 }
 
 app() {
