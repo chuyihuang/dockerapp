@@ -1,6 +1,7 @@
-git clone --depth 1 https://github.com/chuyihuang/dockerapp.git app
+# git clone --depth 1 https://github.com/chuyihuang/dockerapp.git app
+git clone --depth 1 ~/repository/dockerapp.git dockerapp
 
-cd app
+cd dockerapp
 
 source "/usr/local/share/chruby/chruby.sh"
 
