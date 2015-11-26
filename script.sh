@@ -7,8 +7,8 @@ db() {
 app() {
   docker stop app
   docker rm app
-  docker run -d -p 80:80 --name app --link mysql:latest chu/app
-  # docker run -p 80:80 --link app_db:postgres --name app chu/app
+  # docker run -d -p 80:80 --name app --link mysql:latest chu/app
+  docker run -d -p 80:80 --name app --link mysql chu/app
 }
 
 action=$1
