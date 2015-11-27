@@ -8,7 +8,7 @@ app() {
   docker stop app
   docker rm app
   # docker run -d -p 80:80 --name app --link mysql:latest chu/app
-  docker run -d -p 80:80 --name app --link mysql chu/app
+  docker run -d -p 80:80 --name app --link mysql:latest chu/app
 }
 
 action=$1
