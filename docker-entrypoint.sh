@@ -1,6 +1,6 @@
 # git clone --depth 1 https://github.com/chuyihuang/dockerapp.git app
 # git clone --depth 1 ~/repository/dockerapp.git dockerapp
-git clone ssh://vvspor2@139.162.27.210:5678/home/vvspor2/repository/dockerapp.git
+git clone https://github.com/chuyihuang/dockerapp.git
 
 cd dockerapp
 
