@@ -1,6 +1,6 @@
-# git clone --depth 1 https://github.com/chuyihuang/dockerapp.git app
+git clone --depth 1 https://github.com/chuyihuang/dockerapp.git app
 # git clone --depth 1 ~/repository/dockerapp.git dockerapp
-git clone https://github.com/chuyihuang/dockerapp.git
+# git clone https://github.com/chuyihuang/dockerapp.git 
 
 cd dockerapp
 
